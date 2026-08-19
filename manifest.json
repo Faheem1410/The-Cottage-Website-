@@ -1,0 +1,24 @@
+{
+  "name": "The Cottage Brunch & Venue",
+  "short_name": "The Cottage",
+  "description": "Daily brunch cafe and wedding/events venue in Wednesbury, UK.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F7F1E4",
+  "theme_color": "#414A34",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
