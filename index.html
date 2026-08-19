@@ -504,7 +504,7 @@
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="5" placeholder="Message" required></textarea>
         <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="enquiry-note">This form opens your email app addressed to Events@thecottageinfo.com — nothing is sent from the website itself yet.</p>
+        <p class="enquiry-note" id="enquiry-status">We'll get back to you by email at Events@thecottageinfo.com.</p>
       </form>
     </div>
   </div>
@@ -539,16 +539,44 @@
     });
   });
 
+  const SUPABASE_URL = 'https://mlslqjwzdaginxlxadjw.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_tCe7-GdyQLQzkZNsZ6JbRw_cL6pmTS7';
+
   const enquiryForm = document.getElementById('enquiry-form');
+  const enquiryStatus = document.getElementById('enquiry-status');
   if (enquiryForm) {
-    enquiryForm.addEventListener('submit', (e) => {
+    enquiryForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const submitBtn = enquiryForm.querySelector('button[type="submit"]');
       const name = enquiryForm.name.value;
       const email = enquiryForm.email.value;
       const message = enquiryForm.message.value;
-      const subject = encodeURIComponent('Enquiry from ' + name);
-      const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-      window.location.href = 'mailto:Events@thecottageinfo.com?subject=' + subject + '&body=' + body;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(SUPABASE_URL + '/rest/v1/enquiries', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_KEY,
+            'Authorization': 'Bearer ' + SUPABASE_KEY,
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify({ name, email, message })
+        });
+
+        if (!res.ok) throw new Error('Request failed');
+
+        enquiryForm.reset();
+        enquiryStatus.textContent = "Thanks, " + name + " — we've received your message and will be in touch soon.";
+        submitBtn.textContent = 'Sent';
+      } catch (err) {
+        enquiryStatus.textContent = "Something went wrong sending that — please email us directly at Events@thecottageinfo.com.";
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
     });
   }
 </script>
