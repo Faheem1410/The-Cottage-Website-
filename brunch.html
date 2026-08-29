@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brunch Menu — The Cottage</title>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#414A34">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="The Cottage, Venue and Brunch" class="brand-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="">About</a></li>
+      <li><a href="venue.html" class="">Venue</a></li>
+      <li><a href="brunch.html" class="current">Brunch</a></li>
+      <li><a href="contact.html" class="">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="utility-phones">
+        <a href="tel:07554236168" class="utility-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6"/></svg>
+          07554 236168
+        </a>
+        <a href="tel:07368801310" class="utility-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6"/></svg>
+          07368 801310
+        </a>
+      </div>
+      <a href="contact.html" class="btn utility-btn"><span class="full-label">Get a Quotation</span><span class="short-label" aria-hidden="true">Quote</span></a>
+    </div>
+  </nav>
+</header>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">The Cottage Brunch</div>
+      <h2>On the table</h2>
+      <p>A taste of the menu — browse by category.</p>
+      <button type="button" id="open-reservation" class="btn utility-btn" style="margin-top:18px; padding:12px 28px; font-size:0.82rem;">Reserve a table</button>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Menu categories">
+      <button class="tab-btn active" data-tab="english">English</button>
+      <button class="tab-btn" data-tab="desi">Desi</button>
+      <button class="tab-btn" data-tab="american">American</button>
+      <button class="tab-btn" data-tab="burgers">Burgers</button>
+      <button class="tab-btn" data-tab="sandwiches">Sandwiches</button>
+      <button class="tab-btn" data-tab="drinks">Drinks &amp; Sweets</button>
+      <button class="tab-btn" data-tab="full">Full Menu</button>
+    </div>
+
+    <div class="tab-panel active" id="panel-english">
+      <div class="menu-grid">
+        <div class="menu-row"><div><div class="name">Cottage House Breakfast</div><div class="desc">2x toast, scrambled eggs, sausages, hash browns, turkey rashers, beans</div></div><div class="price">£12.00</div></div>
+        <div class="menu-row"><div><div class="name">Full English</div><div class="desc">2x toast, fried eggs, keema bhuna, sausages, hash browns, turkey rashers, beans</div></div><div class="price">£12.00</div></div>
+        <div class="menu-row"><div><div class="name">Country Breakfast</div><div class="desc">2x toast, scrambled eggs, sausages, turkey rashers, fish fingers, onion rings, beans</div></div><div class="price">£12.80</div></div>
+        <div class="menu-row"><div><div class="name">Veggie Breakfast</div><div class="desc">2x toast, veggie sausages, hash browns, fried eggs, beans</div></div><div class="price">£9.20</div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-desi">
+      <div class="menu-grid">
+        <div class="menu-row"><div><div class="name">Keema Nashta</div><div class="desc">2x paratha, desi omelette, keema, aloo bhaji, masala beans</div></div><div class="price">£13.00</div></div>
+        <div class="menu-row"><div><div class="name">Omelette Nashta</div><div class="desc">2x paratha, desi omelette, aloo bhaji, masala beans</div></div><div class="price">£9.60</div></div>
+        <div class="menu-row"><div><div class="name">Veggie Nashta</div><div class="desc">2x paratha, channa bhuna, aloo bhaji, masala beans</div></div><div class="price">£10.00</div></div>
+        <div class="menu-row"><div><div class="name">Paratha Wraps</div><div class="desc">Omelette, chicken &amp; cheese, turkey &amp; egg, or keema, egg &amp; cheese</div></div><div class="price">from £4.80</div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-american">
+      <div class="menu-grid">
+        <div class="menu-row"><div><div class="name">Americana</div><div class="desc">2x pancakes, 2x sausages, 2x turkey rashers, scrambled eggs, maple syrup</div></div><div class="price">£12.00</div></div>
+        <div class="menu-row"><div><div class="name">Sunny Stack</div><div class="desc">2x pancakes, chicken fillet, turkey rashers, fried egg, maple syrup</div></div><div class="price">£9.60</div></div>
+        <div class="menu-row"><div><div class="name">Croissant Delight</div><div class="desc">Turkey rashers, cheese, beans, fried egg</div></div><div class="price">£8.50</div></div>
+        <div class="menu-row"><div><div class="name">Garden Delight</div><div class="desc">Croissant, mushroom omelette, cheese, hash brown</div></div><div class="price">£8.00</div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-burgers">
+      <div class="menu-grid">
+        <div class="menu-row"><div><div class="name">Cottage Drip Burger</div><div class="desc">Crispy fried chicken dipped in house sauce and cheese</div></div><div class="price">£7.60</div></div>
+        <div class="menu-row"><div><div class="name">Cheese Burger</div><div class="desc">Meat pattie with cheese</div></div><div class="price">£7.50</div></div>
+        <div class="menu-row"><div><div class="name">Veggie Burger</div><div class="desc">Veggie pattie, cheese and salad</div></div><div class="price">£5.20</div></div>
+        <div class="menu-row"><div><div class="name">Desi Donner Burger</div><div class="desc">Add cheese, jalapenos, or make it a meal</div></div><div class="price">£6.40</div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-sandwiches">
+      <div class="menu-grid">
+        <div class="menu-row"><div><div class="name">Club Sandwich</div><div class="desc">Omelette, turkey rashers, chicken perini, salad, cheese, fries, house sauce</div></div><div class="price">£7.60</div></div>
+        <div class="menu-row"><div><div class="name">Veggie Club</div><div class="desc">Veggie patty, salad, hash brown, house sauce</div></div><div class="price">£6.00</div></div>
+        <div class="menu-row"><div><div class="name">Salad Bowl</div><div class="desc">Crunchy lettuce, tomato, cucumber, chicken perini &amp; tuna</div></div><div class="price">£6.50</div></div>
+        <div class="menu-row"><div><div class="name">The Signature Cottage</div><div class="desc">Roasted minced meat, scrambled egg, house sauce, salad, mozzarella &amp; cheddar</div></div><div class="price">£15.00</div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-drinks">
+      <div class="menu-grid">
+        <div class="menu-row"><div><div class="name">Tea</div><div class="desc">Karak chaii, ginger, English, green, mint, or ghur chaii</div></div><div class="price">£1.95</div></div>
+        <div class="menu-row"><div><div class="name">Coffee</div><div class="desc">Americano, espresso, latte, cappuccino, flat white, mocha</div></div><div class="price">£2.80</div></div>
+        <div class="menu-row"><div><div class="name">Mocktails</div><div class="desc">Strawberry crush, blue lagoon, mango delight, mint mojito</div></div><div class="price">£4.95</div></div>
+        <div class="menu-row"><div><div class="name">Waffle / Croffle</div><div class="desc">Add strawberries, blueberries, vanilla, caramel or biscoff</div></div><div class="price">£6.50</div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-full">
+      <div class="full-menu-images">
+        <img src="menu-full-1.jpg" alt="The Cottage full menu, page 1: breakfasts, burgers and sandos">
+        <img src="menu-full-2.jpg" alt="The Cottage full menu, page 2: sides, sandwiches, desserts and drinks">
+      </div>
+      <p class="menu-note"><a href="cottage-full-menu.pdf" target="_blank" rel="noopener">Download the full menu (PDF)</a></p>
+    </div>
+
+    <p class="menu-note">Full menu, build-your-own meals and kids options available in cafe.</p>
+  </div>
+</section>
+
+<div class="booking-overlay" id="reservation-overlay" hidden>
+  <div class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="reservation-title">
+    <button type="button" class="booking-close" id="reservation-close" aria-label="Close">&times;</button>
+    <h3 id="reservation-title">Reserve a table</h3>
+    <p class="booking-intro">Pick a date and time, and order ahead if you like — we'll have it ready for you.</p>
+
+    <div class="booking-progress" id="reservation-progress">
+      <div class="booking-progress-step active" data-step="1"><span>1</span>Date &amp; party</div>
+      <div class="booking-progress-step" data-step="2"><span>2</span>Pre-order</div>
+      <div class="booking-progress-step" data-step="3"><span>3</span>Your details</div>
+    </div>
+
+    <form id="reservation-form">
+      <div class="booking-step active" data-step="1">
+        <div class="booking-section">
+          <label class="booking-label">Reservation date</label>
+          <div class="mini-cal">
+            <div class="mini-cal-head">
+              <button type="button" id="res-cal-prev" aria-label="Previous month">&lsaquo;</button>
+              <span id="res-cal-month-label"></span>
+              <button type="button" id="res-cal-next" aria-label="Next month">&rsaquo;</button>
+            </div>
+            <div class="mini-cal-weekdays">
+              <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+            </div>
+            <div class="mini-cal-grid" id="res-cal-grid"></div>
+          </div>
+          <p class="booking-selected-date" id="res-selected-date-text">No date selected yet</p>
+        </div>
+
+        <div class="booking-grid">
+          <div class="booking-field">
+            <label for="r-time">Time</label>
+            <select id="r-time" name="time" required>
+              <option value="">Select a time...</option>
+            </select>
+          </div>
+          <div class="booking-field">
+            <label for="r-people">Number of people</label>
+            <input type="number" id="r-people" name="people" min="1" required>
+          </div>
+        </div>
+
+        <div class="booking-nav">
+          <span></span>
+          <button type="button" class="btn btn-primary booking-next" data-next="2">Next: Pre-order</button>
+        </div>
+      </div>
+
+      <div class="booking-step" data-step="2">
+        <div class="booking-section">
+          <label class="booking-label">Would you like to order ahead?</label>
+          <div class="booking-toggle">
+            <label><input type="radio" name="preorder" value="yes" id="preorder-yes"> Yes, let's order now</label>
+            <label><input type="radio" name="preorder" value="no" id="preorder-no" checked> No, we'll order when we arrive</label>
+          </div>
+        </div>
+
+        <div class="cart-wrap" id="cart-wrap" hidden>
+          <p class="cart-build-note">Fancy a Build Your Own Meal (1 carb, 1 protein, 1 side for £7.00)? Just describe what you'd like in the notes on the next step.</p>
+          <div class="cart-tabs" id="cart-tabs"></div>
+          <div class="cart-items" id="cart-items"></div>
+          <div class="cart-summary">
+            <p class="cart-summary-empty" id="cart-empty-msg">Your basket is empty — add items above.</p>
+            <ul class="cart-summary-list" id="cart-summary-list"></ul>
+            <div class="cart-total-row" id="cart-total-row" hidden><span>Total</span><span id="cart-total">£0.00</span></div>
+          </div>
+        </div>
+
+        <div class="booking-nav">
+          <button type="button" class="btn booking-back" data-back="1">Back</button>
+          <button type="button" class="btn btn-primary booking-next" data-next="3">Next: Your details</button>
+        </div>
+      </div>
+
+      <div class="booking-step" data-step="3">
+        <div class="booking-grid">
+          <div class="booking-field">
+            <label for="r-name">Your name</label>
+            <input type="text" id="r-name" name="name" required>
+          </div>
+          <div class="booking-field">
+            <label for="r-phone">Contact number</label>
+            <input type="tel" id="r-phone" name="phone" required>
+          </div>
+        </div>
+        <div class="booking-field">
+          <label for="r-notes">Anything else we should know? (optional)</label>
+          <textarea id="r-notes" rows="3"></textarea>
+        </div>
+
+        <div class="booking-nav">
+          <button type="button" class="btn booking-back" data-back="2">Back</button>
+          <button type="submit" class="btn btn-primary" id="reservation-submit">Send reservation</button>
+        </div>
+        <p class="booking-status" id="reservation-status"></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 The Cottage Brunch and Venue. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="whatsapp-fab" id="whatsapp-fab">
+  <div class="whatsapp-fab-menu" id="whatsapp-fab-menu" hidden>
+    <a href="https://wa.me/447554236168" target="_blank" rel="noopener" class="whatsapp-fab-option">
+      <span class="whatsapp-fab-name">Faysol</span>
+      <span class="whatsapp-fab-sub">Chat on WhatsApp</span>
+    </a>
+    <a href="https://wa.me/447368801310" target="_blank" rel="noopener" class="whatsapp-fab-option">
+      <span class="whatsapp-fab-name">Hafsah</span>
+      <span class="whatsapp-fab-sub">Chat on WhatsApp</span>
+    </a>
+  </div>
+  <button type="button" class="whatsapp-fab-btn" id="whatsapp-fab-btn" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.2 1 1-3.1-.2-.3C3.7 15 3.2 13.5 3.2 12c0-4.8 3.9-8.8 8.8-8.8s8.8 3.9 8.8 8.8-3.9 8.8-8.8 8.8z"/></svg>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

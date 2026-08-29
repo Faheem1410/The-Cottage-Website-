@@ -1,5 +1,9 @@
 const CACHE_NAME = "cottage-cache-v1";
-const PRECACHE_URLS = ["/", "/index.html", "/manifest.json", "/icon-192.png", "/icon-512.png"];
+const PRECACHE_URLS = [
+  "/", "/index.html", "/about.html", "/venue.html", "/brunch.html", "/contact.html",
+  "/styles.css", "/script.js", "/logo.png",
+  "/manifest.json", "/icon-192.png", "/icon-512.png"
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
