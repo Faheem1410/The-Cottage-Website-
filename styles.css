@@ -444,10 +444,11 @@
   }
   .whatsapp-fab-btn:hover{ transform:scale(1.06); }
   .whatsapp-fab-menu{
-    display:flex; flex-direction:column; gap:8px;
+    display:none; flex-direction:column; gap:8px;
     background:var(--cream); border-radius:10px; padding:10px;
     box-shadow:0 12px 32px rgba(0,0,0,0.25); min-width:190px;
   }
+  .whatsapp-fab-menu:not([hidden]){ display:flex; }
   .whatsapp-fab-option{
     display:flex; flex-direction:column; text-decoration:none;
     padding:10px 12px; border-radius:6px; color:var(--ink);
