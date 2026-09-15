@@ -28,6 +28,11 @@
   const SUPABASE_URL = 'https://mlslqjwzdaginxlxadjw.supabase.co';
   const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1sc2xxand6ZGFnaW54bHhhZGp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcxMjIxODQsImV4cCI6MjEwMjY5ODE4NH0.hn42RtE0_6ad3fXPnAXtNRiJjV4WGjIkzRWVS_qJd78';
 
+  function buildMailtoFallback(statusEl, subject, bodyText, extraNote) {
+    const mailLink = 'mailto:Events@thecottageinfo.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyText);
+    statusEl.innerHTML = 'Something went wrong sending that automatically — but your details are ready to send below, nothing\'s lost. <a href="' + mailLink + '" class="btn btn-primary" style="display:inline-block;margin-top:10px;">Email us directly with your details</a>' + (extraNote ? ' ' + extraNote : '');
+  }
+
   const enquiryForm = document.getElementById('enquiry-form');
   const enquiryStatus = document.getElementById('enquiry-status');
   if (enquiryForm) {
@@ -59,7 +64,7 @@
         enquiryStatus.textContent = "Thanks, " + name + " — we've received your message and will be in touch soon.";
         submitBtn.textContent = 'Sent';
       } catch (err) {
-        enquiryStatus.textContent = "Something went wrong sending that — please email us directly at Events@thecottageinfo.com.";
+        buildMailtoFallback(enquiryStatus, 'Website Enquiry from ' + name, 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send Message';
       }
@@ -311,7 +316,7 @@
         bookingStatus.textContent = "Thanks, " + name + " — we've received your enquiry and will be in touch soon.";
         submitBtn.textContent = 'Sent';
       } catch (err) {
-        bookingStatus.textContent = "Something went wrong sending that — please email us directly at Events@thecottageinfo.com.";
+        buildMailtoFallback(bookingStatus, 'Venue Enquiry - ' + functionType, 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send enquiry';
       }
@@ -773,7 +778,7 @@
         reservationStatus.textContent = "Thanks, " + name + " — we've received your reservation and will confirm shortly.";
         submitBtn.textContent = 'Sent';
       } catch (err) {
-        reservationStatus.textContent = "Something went wrong sending that — please call us directly to reserve.";
+        buildMailtoFallback(reservationStatus, 'Table Reservation - ' + name, 'Name: ' + name + '\nPhone: ' + phone + '\n\n' + message, 'or call us directly.');
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send reservation';
       }
