@@ -60,6 +60,15 @@
 
         if (!res.ok) throw new Error('Request failed');
 
+        if (window.emailjs) {
+          emailjs.send('service_4kp27j9', 'template_mz78ghk', {
+            subject: 'Website Enquiry from ' + name,
+            name: name,
+            email: email,
+            message: message
+          }).catch(() => {});
+        }
+
         enquiryForm.reset();
         enquiryStatus.textContent = "Thanks, " + name + " — we've received your message and will be in touch soon.";
         submitBtn.textContent = 'Sent';
@@ -312,6 +321,15 @@
         });
 
         if (!res.ok) throw new Error('Request failed');
+
+        if (window.emailjs) {
+          emailjs.send('service_4kp27j9', 'template_mz78ghk', {
+            subject: 'Venue Enquiry - ' + functionType,
+            name: name,
+            email: email,
+            message: message
+          }).catch(() => {});
+        }
 
         bookingStatus.textContent = "Thanks, " + name + " — we've received your enquiry and will be in touch soon.";
         submitBtn.textContent = 'Sent';
@@ -774,6 +792,15 @@
         });
 
         if (!res.ok) throw new Error('Request failed');
+
+        if (window.emailjs) {
+          emailjs.send('service_4kp27j9', 'template_mz78ghk', {
+            subject: 'Table Reservation - ' + name,
+            name: name,
+            email: '',
+            message: message
+          }).catch(() => {});
+        }
 
         reservationStatus.textContent = "Thanks, " + name + " — we've received your reservation and will confirm shortly.";
         submitBtn.textContent = 'Sent';
